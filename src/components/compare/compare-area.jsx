@@ -50,7 +50,7 @@ const CompareArea = () => {
                                 height={176}
                               />
                               <h4 className="tp-compare-product-title">
-                                <Link href={`/product-details/${item._id}`}>
+                                <Link href={`/product-details/₹{item._id}`}>
                                   {item.title}
                                 </Link>
                               </h4>
@@ -78,7 +78,7 @@ const CompareArea = () => {
                         {compareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-price">
-                              <span>${item.price.toFixed(2)}</span>
+                              <span>₹{item.price.toFixed(2)}</span>
                             </div>
                           </td>
                         ))}
@@ -118,7 +118,7 @@ const CompareArea = () => {
                         {compareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-remove">
-                              <button onClick={()=>handleRemoveComparePrd({title:item.title,id:item._id })}>
+                              <button onClick={() => handleRemoveComparePrd({ title: item.title, id: item._id })}>
                                 <i className="fal fa-trash-alt"></i>
                               </button>
                             </div>
